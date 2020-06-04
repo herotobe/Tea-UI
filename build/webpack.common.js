@@ -54,7 +54,7 @@ const commonConfig = {
         }
       },
       {
-        test: /\.(eot|ttf)$/,
+        test: /\.(eot|ttf|woff|woff2)$/,
         use: ['file-loader']
       }
     ]
