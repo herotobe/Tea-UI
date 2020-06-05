@@ -1,0 +1,15 @@
+.block(@width) {
+  display: block;
+  flex: 0 0 @width / 24 * 100%;
+  max-width: @width / 24 * 100%;
+}
+.loop(@n,@i:1) when (@i <= @n) {
+  &-@{i} {
+    .block(@i);
+  }
+  .loop(@n, (@i+1));
+}
+.tea-col {
+  position: relative;
+  .loop(24);
+}
